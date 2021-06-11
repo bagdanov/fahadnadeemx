@@ -1,0 +1,52 @@
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\bin\Debug\SalonLibrary.dll.config
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\bin\Debug\SalonLibrary.dll
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\bin\Debug\SalonLibrary.pdb
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\bin\Debug\EntityFramework.dll
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\bin\Debug\EntityFramework.xml
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\obj\Debug\SalonLibrary.csprojAssemblyReference.cache
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\obj\Debug\SalonLibrary.csproj.CoreCompileInputs.cache
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\obj\Debug\SalonLibrary.csproj.CopyComplete
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\obj\Debug\SalonLibrary.dll
+C:\Users\dell\Documents\Visual Studio 2017\Projects\StoredProcedures\SalonLibrary\obj\Debug\SalonLibrary.pdb
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\bin\Debug\SalonLibrary.dll.config
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\bin\Debug\SalonLibrary.dll
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\bin\Debug\SalonLibrary.pdb
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\bin\Debug\EntityFramework.dll
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\bin\Debug\EntityFramework.xml
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\obj\Debug\SalonLibrary.csprojAssemblyReference.cache
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\obj\Debug\SalonLibrary.csproj.CoreCompileInputs.cache
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\obj\Debug\SalonLibrary.csproj.CopyComplete
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\obj\Debug\SalonLibrary.dll
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\SalonLibrary\obj\Debug\SalonLibrary.pdb
+C:\InHouse\Salon\SalonLibrary\bin\Debug\SalonLibrary.dll.config
+C:\InHouse\Salon\SalonLibrary\bin\Debug\SalonLibrary.dll
+C:\InHouse\Salon\SalonLibrary\bin\Debug\SalonLibrary.pdb
+C:\InHouse\Salon\SalonLibrary\obj\Debug\SalonLibrary.csprojAssemblyReference.cache
+C:\InHouse\Salon\SalonLibrary\obj\Debug\SalonLibrary.csproj.CoreCompileInputs.cache
+C:\InHouse\Salon\SalonLibrary\obj\Debug\SalonLibrary.csproj.CopyComplete
+C:\InHouse\Salon\SalonLibrary\obj\Debug\SalonLibrary.dll
+C:\InHouse\Salon\SalonLibrary\obj\Debug\SalonLibrary.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\bin\Debug\SalonLibrary.dll.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\bin\Debug\SalonLibrary.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\bin\Debug\SalonLibrary.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\obj\Debug\SalonLibrary.csprojAssemblyReference.cache
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\obj\Debug\SalonLibrary.csproj.CoreCompileInputs.cache
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\obj\Debug\SalonLibrary.csproj.CopyComplete
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\obj\Debug\SalonLibrary.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonLibrary\obj\Debug\SalonLibrary.pdb
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\bin\Debug\SalonLibrary.dll.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\bin\Debug\SalonLibrary.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\bin\Debug\SalonLibrary.pdb
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.csproj.AssemblyReference.cache
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.csproj.CoreCompileInputs.cache
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.csproj.CopyComplete
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.pdb
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\bin\Debug\SalonLibrary.dll.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\bin\Debug\SalonLibrary.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\bin\Debug\SalonLibrary.pdb
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.csprojAssemblyReference.cache
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.csproj.CopyComplete
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonLibrary\obj\Debug\SalonLibrary.pdb

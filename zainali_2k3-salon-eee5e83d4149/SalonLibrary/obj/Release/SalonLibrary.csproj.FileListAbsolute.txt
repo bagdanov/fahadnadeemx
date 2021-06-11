@@ -1,0 +1,3 @@
+C:\InHouse\Salon\SalonLibrary\obj\Release\SalonLibrary.csprojResolveAssemblyReference.cache
+C:\InHouse\Salon\SalonLibrary\obj\Release\SalonLibrary.csproj.CoreCompileInputs.cache
+C:\InHouse\Salon\SalonLibrary\obj\Release\SalonLibrary.csprojAssemblyReference.cache

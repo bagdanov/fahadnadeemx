@@ -1,0 +1,2221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SalonManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ObjectID" Type="int" />
+          <Property Name="ModuleID" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Debit" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Credit" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Balance" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Appointment">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="AppointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppointmentDateTime" Type="datetime" />
+          <Property Name="AppointmentStatusID" Type="int" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="InvoiceDate" Type="datetime" />
+          <Property Name="AdditionalCost" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="PaymentMode" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="AppointmentService">
+          <Key>
+            <PropertyRef Name="AppointmentServiceID" />
+          </Key>
+          <Property Name="AppointmentServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppointmentID" Type="int" />
+          <Property Name="ServiceID" Type="int" />
+          <Property Name="ServiceTypeID" Type="int" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="1000" />
+          <Property Name="TelePhoneNumber" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Email" Type="nvarchar" MaxLength="1000" />
+          <Property Name="City" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Country" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientTypeID" Type="int" />
+          <Property Name="TagLine" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Website" Type="nvarchar" MaxLength="1000" />
+          <Property Name="NTN" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SNTN" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="ClientType">
+          <Key>
+            <PropertyRef Name="ClientTypeID" />
+          </Key>
+          <Property Name="ClientTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Charges" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="PackageName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AlternatePhoneNumber" Type="nvarchar" MaxLength="1000" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Password" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="City" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CustomerTypeID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AlternatePhoneNumber" Type="nvarchar" MaxLength="1000" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="CNIC" Type="nvarchar" MaxLength="1000" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Password" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="EmployeeTypeID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="EmployeeType">
+          <Key>
+            <PropertyRef Name="EmployeeTypeID" />
+          </Key>
+          <Property Name="EmployeeTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Expense">
+          <Key>
+            <PropertyRef Name="ExpenseID" />
+          </Key>
+          <Property Name="ExpenseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExpenseTypeID" Type="int" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductCategoryID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryID" />
+          </Key>
+          <Property Name="ProductCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductService">
+          <Key>
+            <PropertyRef Name="ProductServiceID" />
+          </Key>
+          <Property Name="ProductServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceID" Type="int" />
+          <Property Name="ServiceTypeID" Type="int" />
+          <Property Name="ProductCategoryID" Type="int" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="Quantity" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="ServiceType">
+          <Key>
+            <PropertyRef Name="ServiceTypeID" />
+          </Key>
+          <Property Name="ServiceTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Cost" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="TimeRequired" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="StockID" />
+          </Key>
+          <Property Name="StockID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ProductCategoryID" Type="int" />
+          <Property Name="Quantity" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ClientID" Type="int" />
+        </EntityType>
+        <Function Name="DeleteAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="accountID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteAppointmentService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appointmentServiceID" Type="int" Mode="In" />
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientTypeID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CustomerID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="employeeID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteEmployeeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="employeeTypeID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="expenseID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteProductService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productServiceID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteServiceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stockID" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="F_GetAppointmentCost" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromDate" Type="date" Mode="In" />
+          <Parameter Name="ToDate" Type="date" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+          <Parameter Name="customerID" Type="int" Mode="In" />
+          <Parameter Name="dateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="dateTo" Type="datetime" Mode="In" />
+          <Parameter Name="statusID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetAppointmentService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appointmentServiceID" Type="int" Mode="In" />
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientTypeID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="customerID" Type="int" Mode="In" />
+          <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetDashboardKPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="dateTo" Type="datetime" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="employeeID" Type="int" Mode="In" />
+          <Parameter Name="emailAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetEmployeeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="expenseID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetMonthlySales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productID" Type="int" Mode="In" />
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetProductService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productServiceID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetServiceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stockID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetWeeklySales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="moduleID" Type="int" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="accountID" Type="int" Mode="In" />
+          <Parameter Name="objectID" Type="int" Mode="In" />
+          <Parameter Name="moduleID" Type="int" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="debit" Type="decimal" Mode="In" />
+          <Parameter Name="credit" Type="decimal" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+          <Parameter Name="appointmentDateTime" Type="datetime" Mode="In" />
+          <Parameter Name="appointmentStatusID" Type="int" Mode="In" />
+          <Parameter Name="customerID" Type="int" Mode="In" />
+          <Parameter Name="invoiceDate" Type="datetime" Mode="In" />
+          <Parameter Name="additionalCost" Type="decimal" Mode="In" />
+          <Parameter Name="paymentMode" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetAppointmentService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appointmentServiceID" Type="int" Mode="In" />
+          <Parameter Name="appointmentID" Type="int" Mode="In" />
+          <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="employeeID" Type="int" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientID" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="address" Type="nvarchar" Mode="In" />
+          <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+          <Parameter Name="telephoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="email" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="country" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientTypeID" Type="int" Mode="In" />
+          <Parameter Name="tagLine" Type="nvarchar" Mode="In" />
+          <Parameter Name="website" Type="nvarchar" Mode="In" />
+          <Parameter Name="nTN" Type="nvarchar" Mode="In" />
+          <Parameter Name="sNTN" Type="nvarchar" Mode="In" />
+          <Parameter Name="logo" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SetClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientTypeID" Type="int" Mode="In" />
+          <Parameter Name="typeName" Type="nvarchar" Mode="In" />
+          <Parameter Name="charges" Type="decimal" Mode="In" />
+          <Parameter Name="packageName" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="customerID" Type="int" Mode="In" />
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+          <Parameter Name="dateOfBirth" Type="datetime" Mode="In" />
+          <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="alternatePhoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+          <Parameter Name="address" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="employeeID" Type="int" Mode="In" />
+          <Parameter Name="fullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="alternatePhoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="dateOfBirth" Type="datetime" Mode="In" />
+          <Parameter Name="cNIC" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+          <Parameter Name="address" Type="nvarchar" Mode="In" />
+          <Parameter Name="employeeTypeID" Type="int" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetEmployeeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="employeeTypeID" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="expenseID" Type="int" Mode="In" />
+          <Parameter Name="expenseTypeID" Type="int" Mode="In" />
+          <Parameter Name="typeName" Type="nvarchar" Mode="In" />
+          <Parameter Name="date" Type="date" Mode="In" />
+          <Parameter Name="amount" Type="decimal" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productID" Type="int" Mode="In" />
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="productName" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetProductService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productServiceID" Type="int" Mode="In" />
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="productID" Type="int" Mode="In" />
+          <Parameter Name="quantity" Type="decimal" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SetService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetServiceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+          <Parameter Name="serviceID" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="cost" Type="decimal" Mode="In" />
+          <Parameter Name="timeRequired" Type="decimal" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stockID" Type="int" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="productID" Type="int" Mode="In" />
+          <Parameter Name="productCategoryID" Type="int" Mode="In" />
+          <Parameter Name="quantity" Type="decimal" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="clientID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ftxt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="invizen">
+          <Parameter Name="txt" Type="varchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="SalonManagementSystemModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppointmentService" EntityType="Self.AppointmentService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientType" EntityType="Self.ClientType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeType" EntityType="Self.EmployeeType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Expense" EntityType="Self.Expense" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductService" EntityType="Self.ProductService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceType" EntityType="Self.ServiceType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SalonManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Appointment">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppointmentDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AppointmentStatusID" Type="Int32" />
+          <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+          <Property Name="AdditionalCost" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="PaymentMode" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="AppointmentService">
+          <Key>
+            <PropertyRef Name="AppointmentServiceID" />
+          </Key>
+          <Property Name="AppointmentServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppointmentID" Type="Int32" />
+          <Property Name="ServiceTypeID" Type="Int32" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceID" Type="Int32" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AlternatePhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerTypeID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AlternatePhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="CNIC" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeTypeID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EmployeeType">
+          <Key>
+            <PropertyRef Name="EmployeeTypeID" />
+          </Key>
+          <Property Name="EmployeeTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ServiceType">
+          <Key>
+            <PropertyRef Name="ServiceTypeID" />
+          </Key>
+          <Property Name="ServiceTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="TimeRequired" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="SalonManagementSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+          <EntitySet Name="AppointmentServices" EntityType="Self.AppointmentService" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="EmployeeTypes" EntityType="Self.EmployeeType" />
+          <EntitySet Name="Services" EntityType="Self.Service" />
+          <EntitySet Name="ServiceTypes" EntityType="Self.ServiceType" />
+          <FunctionImport Name="DeleteAppointment" ReturnType="Collection(Int32)">
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteAppointmentService" ReturnType="Collection(Int32)">
+            <Parameter Name="appointmentServiceID" Mode="In" Type="Int32" />
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteCustomer" ReturnType="Collection(Int32)">
+            <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteEmployee" ReturnType="Collection(Int32)">
+            <Parameter Name="employeeID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteEmployeeType" ReturnType="Collection(Int32)">
+            <Parameter Name="employeeTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteInvoice" ReturnType="Collection(Int32)">
+            <Parameter Name="invoiceID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteService" ReturnType="Collection(Int32)">
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteServiceType" ReturnType="Collection(Int32)">
+            <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetAppointment" ReturnType="Collection(SalonManagementSystemModel.GetAppointment_Result)">
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="customerID" Mode="In" Type="Int32" />
+            <Parameter Name="dateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="dateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="statusID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetAppointmentService" ReturnType="Collection(SalonManagementSystemModel.GetAppointmentService_Result)">
+            <Parameter Name="appointmentServiceID" Mode="In" Type="Int32" />
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetCustomer" ReturnType="Collection(SalonManagementSystemModel.GetCustomer_Result)">
+            <Parameter Name="customerID" Mode="In" Type="Int32" />
+            <Parameter Name="phoneNumber" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetEmployee" ReturnType="Collection(SalonManagementSystemModel.GetEmployee_Result)">
+            <Parameter Name="employeeID" Mode="In" Type="Int32" />
+            <Parameter Name="emailAddress" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetEmployeeType" ReturnType="Collection(SalonManagementSystemModel.GetEmployeeType_Result)">
+          <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetInvoice" ReturnType="Collection(SalonManagementSystemModel.GetInvoice_Result)">
+          <Parameter Name="invoiceID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetService" ReturnType="Collection(SalonManagementSystemModel.GetService_Result)">
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetServiceType" ReturnType="Collection(SalonManagementSystemModel.GetServiceType_Result)">
+            <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetAppointment" ReturnType="Collection(Int32)">
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="appointmentDateTime" Mode="In" Type="DateTime" />
+            <Parameter Name="appointmentStatusID" Mode="In" Type="Int32" />
+            <Parameter Name="customerID" Mode="In" Type="Int32" />
+            <Parameter Name="invoiceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="additionalCost" Mode="In" Type="Decimal" />
+            <Parameter Name="paymentMode" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetAppointmentService" ReturnType="Collection(Int32)">
+            <Parameter Name="appointmentServiceID" Mode="In" Type="Int32" />
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="employeeID" Mode="In" Type="Int32" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetCustomer" ReturnType="Collection(Int32)">
+            <Parameter Name="customerID" Mode="In" Type="Int32" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+            <Parameter Name="dateOfBirth" Mode="In" Type="DateTime" />
+            <Parameter Name="phoneNumber" Mode="In" Type="String" />
+            <Parameter Name="alternatePhoneNumber" Mode="In" Type="String" />
+            <Parameter Name="emailAddress" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetEmployee" ReturnType="Collection(Int32)">
+            <Parameter Name="employeeID" Mode="In" Type="Int32" />
+            <Parameter Name="fullName" Mode="In" Type="String" />
+            <Parameter Name="phoneNumber" Mode="In" Type="String" />
+            <Parameter Name="alternatePhoneNumber" Mode="In" Type="String" />
+            <Parameter Name="dateOfBirth" Mode="In" Type="DateTime" />
+            <Parameter Name="cNIC" Mode="In" Type="String" />
+            <Parameter Name="emailAddress" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="employeeTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetEmployeeType" ReturnType="Collection(Int32)">
+            <Parameter Name="employeeTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetInvoice" ReturnType="Collection(Int32)">
+            <Parameter Name="invoiceID" Mode="In" Type="Int32" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="totalCost" Mode="In" Type="Decimal" />
+            <Parameter Name="additionalCost" Mode="In" Type="Decimal" />
+            <Parameter Name="paymentMode" Mode="In" Type="String" />
+            <Parameter Name="customerID" Mode="In" Type="Int32" />
+            <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SetService" ReturnType="Collection(Int32)">
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetServiceType" ReturnType="Collection(Int32)">
+            <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="cost" Mode="In" Type="Decimal" />
+            <Parameter Name="timeRequired" Mode="In" Type="Decimal" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Products" EntityType="SalonManagementSystemModel.Product" />
+          <EntitySet Name="ProductCategories" EntityType="SalonManagementSystemModel.ProductCategory" />
+          <EntitySet Name="Stocks" EntityType="SalonManagementSystemModel.Stock" />
+          <FunctionImport Name="DeleteProduct" ReturnType="Collection(Int32)">
+            <Parameter Name="productID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteProductCategory" ReturnType="Collection(Int32)">
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteStock" ReturnType="Collection(Int32)">
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetProduct" ReturnType="Collection(SalonManagementSystemModel.GetProduct_Result)">
+            <Parameter Name="productID" Mode="In" Type="Int32" />
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetProductCategory" ReturnType="Collection(SalonManagementSystemModel.GetProductCategory_Result)">
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetStock" ReturnType="Collection(SalonManagementSystemModel.GetStock_Result)">
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetProduct" ReturnType="Collection(Int32)">
+            <Parameter Name="productID" Mode="In" Type="Int32" />
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="productName" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetProductCategory" ReturnType="Collection(Int32)">
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetStock" ReturnType="Collection(Int32)">
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="productID" Mode="In" Type="Int32" />
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="quantity" Mode="In" Type="Decimal" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Expenses" EntityType="SalonManagementSystemModel.Expense" />
+          <EntitySet Name="ProductServices" EntityType="SalonManagementSystemModel.ProductService" />
+          <FunctionImport Name="DeleteExpense" ReturnType="Collection(Int32)">
+            <Parameter Name="expenseID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteProductService" ReturnType="Collection(Int32)">
+            <Parameter Name="productServiceID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetExpense" ReturnType="Collection(SalonManagementSystemModel.GetExpense_Result)">
+            <Parameter Name="expenseID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetProductService" ReturnType="Collection(SalonManagementSystemModel.GetProductService_Result)">
+          <Parameter Name="productServiceID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetExpense" ReturnType="Collection(Int32)">
+            <Parameter Name="expenseID" Mode="In" Type="Int32" />
+            <Parameter Name="expenseTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="typeName" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="amount" Mode="In" Type="Decimal" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetProductService" ReturnType="Collection(Int32)">
+            <Parameter Name="productServiceID" Mode="In" Type="Int32" />
+            <Parameter Name="serviceID" Mode="In" Type="Int32" />
+            <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+            <Parameter Name="productID" Mode="In" Type="Int32" />
+            <Parameter Name="quantity" Mode="In" Type="Decimal" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Clients" EntityType="SalonManagementSystemModel.Client" />
+          <FunctionImport Name="DeleteAccount" ReturnType="Collection(Int32)">
+            <Parameter Name="accountID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetAccount" ReturnType="Collection(SalonManagementSystemModel.GetAccount_Result)">
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetAccount" ReturnType="Collection(Int32)">
+            <Parameter Name="accountID" Mode="In" Type="Int32" />
+            <Parameter Name="objectID" Mode="In" Type="Int32" />
+            <Parameter Name="moduleID" Mode="In" Type="Int32" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="debit" Mode="In" Type="Decimal" />
+            <Parameter Name="credit" Mode="In" Type="Decimal" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Accounts" EntityType="SalonManagementSystemModel.Account" />
+          <EntitySet Name="ClientTypes" EntityType="SalonManagementSystemModel.ClientType" />
+          <FunctionImport Name="DeleteClient" ReturnType="Collection(Int32)">
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteClientType" ReturnType="Collection(Int32)">
+            <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetClient" ReturnType="Collection(SalonManagementSystemModel.GetClient_Result)">
+          <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetClientType" ReturnType="Collection(SalonManagementSystemModel.GetClientType_Result)">
+          <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetDashboardKPI" ReturnType="Collection(SalonManagementSystemModel.GetDashboardKPI_Result)">
+            <Parameter Name="dateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="dateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetMonthlySales" ReturnType="Collection(SalonManagementSystemModel.GetMonthlySales_Result)" >
+          <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetWeeklySales" ReturnType="Collection(SalonManagementSystemModel.GetWeeklySales_Result)" >
+            <Parameter Name="moduleID" Mode="In" Type="Int32" />
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetClient" ReturnType="Collection(Int32)">
+            <Parameter Name="clientID" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="mobile" Mode="In" Type="String" />
+            <Parameter Name="telephoneNumber" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="country" Mode="In" Type="String" />
+            <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="tagLine" Mode="In" Type="String" />
+            <Parameter Name="website" Mode="In" Type="String" />
+            <Parameter Name="nTN" Mode="In" Type="String" />
+            <Parameter Name="sNTN" Mode="In" Type="String" />
+            <Parameter Name="logo" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SetClientType" ReturnType="Collection(Int32)">
+            <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="typeName" Mode="In" Type="String" />
+            <Parameter Name="charges" Mode="In" Type="Decimal" />
+            <Parameter Name="packageName" Mode="In" Type="String" />
+            <Parameter Name="notes" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ftxt" ReturnType="Collection(SalonManagementSystemModel.ftxt_Result)">
+          <Parameter Name="txt" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetAppointment_Result">
+          <Property Type="Int32" Name="AppointmentID" Nullable="false" />
+          <Property Type="Int32" Name="CustomerID" Nullable="true" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="2000" />
+          <Property Type="DateTime" Name="AppointmentDateTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="AppointmentStatusID" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="DateTime" Name="InvoiceDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="AdditionalCost" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="1000" />
+          <Property Type="Decimal" Name="Cost" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="TotalCost" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetAppointmentService_Result">
+          <Property Type="Int32" Name="AppointmentServiceID" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Int32" Name="ServiceID" Nullable="true" />
+          <Property Type="Int32" Name="AppointmentID" Nullable="false" />
+          <Property Type="String" Name="ServiceTypeName" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ServiceTypeID" Nullable="true" />
+          <Property Type="Decimal" Name="Cost" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Decimal" Name="TimeRequired" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="AppointmentDateTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="CustomerID" Nullable="true" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="2000" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="AppointmentNotes" Nullable="true" />
+          <Property Type="Int32" Name="AppointmentStatusID" Nullable="true" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetCustomer_Result">
+          <Property Type="Int32" Name="CustomerID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="AlternatePhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="CustomerTypeID" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetEmployee_Result">
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="EmployeeType" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="AlternatePhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="CNIC" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Int32" Name="EmployeeTypeID" Nullable="true" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetEmployeeType_Result">
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="1000" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Int32" Name="EmployeeTypeID" Nullable="false" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetInvoice_Result">
+          <Property Type="Int32" Name="InvoiceID" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="2000" />
+          <Property Type="DateTime" Name="AppointmentDateTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Cost" Nullable="true" MaxLength="1000" />
+          <Property Type="Decimal" Name="TotalCost" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Decimal" Name="AdditionalCost" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="1000" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetService_Result">
+          <Property Type="Int32" Name="ServiceID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="1000" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Notes" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetServiceType_Result">
+          <Property Type="Int32" Name="ServiceTypeID" Nullable="false" />
+          <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ServiceTypeName" Nullable="true" MaxLength="1000" />
+          <Property Type="Decimal" Name="TimeRequired" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Int32" Name="ServiceID" Nullable="false" />
+          <Property Type="Decimal" Name="Cost" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductCategoryID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryID" />
+          </Key>
+          <Property Name="ProductCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="StockID" />
+          </Key>
+          <Property Name="StockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="ProductCategoryID" Type="Int32" />
+          <Property Name="Quantity" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="GetProduct_Result">
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="Int32" Name="ProductCategoryID" Nullable="true" />
+          <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetProductCategory_Result">
+          <Property Type="Int32" Name="ProductCategoryID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetStock_Result">
+          <Property Type="Int32" Name="StockID" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ProductID" Nullable="true" />
+          <Property Type="Int32" Name="ProductCategoryID" Nullable="true" />
+          <Property Type="Decimal" Name="Quantity" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Expense">
+          <Key>
+            <PropertyRef Name="ExpenseID" />
+          </Key>
+          <Property Name="ExpenseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExpenseTypeID" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="TypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ProductService">
+          <Key>
+            <PropertyRef Name="ProductServiceID" />
+          </Key>
+          <Property Name="ProductServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceID" Type="Int32" />
+          <Property Name="ServiceTypeID" Type="Int32" />
+          <Property Name="ProductCategoryID" Type="Int32" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="Quantity" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="GetExpense_Result">
+          <Property Type="Int32" Name="ExpenseID" Nullable="false" />
+          <Property Type="Int32" Name="ExpenseTypeID" Nullable="true" />
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="TypeName" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetProductService_Result">
+          <Property Type="Int32" Name="ProductServiceID" Nullable="false" />
+          <Property Type="Int32" Name="ServiceID" Nullable="true" />
+          <Property Type="Int32" Name="ServiceTypeID" Nullable="true" />
+          <Property Type="Int32" Name="ProductCategoryID" Nullable="true" />
+          <Property Type="Int32" Name="ProductID" Nullable="true" />
+          <Property Type="Decimal" Name="Quantity" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ServiceTypeName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="1000" />
+        </ComplexType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="TelePhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ClientTypeID" Type="Int32" />
+          <Property Name="TagLine" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NTN" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SNTN" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Logo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="GetAccount_Result">
+          <Property Type="Int32" Name="AccountID" Nullable="false" />
+          <Property Type="Int32" Name="ObjectID" Nullable="true" />
+          <Property Type="Int32" Name="ModuleID" Nullable="true" />
+          <Property Type="String" Name="ObjectName" Nullable="true" MaxLength="16" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientID" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ObjectID" Type="Int32" />
+          <Property Name="ModuleID" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Debit" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Credit" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="ClientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ClientType">
+          <Key>
+            <PropertyRef Name="ClientTypeID" />
+          </Key>
+          <Property Name="ClientTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Charges" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="PackageName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="GetClient_Result">
+          <Property Type="Int32" Name="ClientID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="TypeName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Mobile" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="TelePhoneNumber" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="ClientTypeID" Nullable="true" />
+          <Property Type="String" Name="TagLine" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Website" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="NTN" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="SNTN" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Logo" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+        </ComplexType>
+        <ComplexType Name="GetDashboardKPI_Result">
+          <Property Type="Int32" Name="Appointments" Nullable="false" />
+          <Property Type="Int32" Name="Profit" Nullable="false" />
+          <Property Type="Int32" Name="Income" Nullable="false" />
+          <Property Type="Int32" Name="Expense" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetMonthlySales_Result">
+          <Property Type="Decimal" Name="Sales" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="Expense" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="Profit" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="Month" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="MonthNo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetWeeklySales_Result">
+          <Property Type="Decimal" Name="Sales" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="Int32" Name="TotalAppointments" Nullable="true" />
+          <Property Type="Decimal" Name="Expense" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="Profit" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="Day" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="WeekDay" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetClientType_Result">
+          <Property Type="Int32" Name="ClientTypeID" Nullable="false" />
+          <Property Type="String" Name="TypeName" Nullable="true" MaxLength="1000" />
+          <Property Type="Decimal" Name="Charges" Nullable="true" Precision="18" Scale="6" />
+          <Property Type="String" Name="PackageName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Notes" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+        </ComplexType>
+        <ComplexType Name="ftxt_Result">
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="object_id" Nullable="false" />
+          <Property Type="Int32" Name="principal_id" Nullable="true" />
+          <Property Type="Int32" Name="schema_id" Nullable="false" />
+          <Property Type="Int32" Name="parent_object_id" Nullable="false" />
+          <Property Type="String" Name="type" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="type_desc" Nullable="true" MaxLength="60" />
+          <Property Type="DateTime" Name="create_date" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="modify_date" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="is_ms_shipped" Nullable="false" />
+          <Property Type="Boolean" Name="is_published" Nullable="false" />
+          <Property Type="Boolean" Name="is_schema_published" Nullable="false" />
+          <Property Type="Boolean" Name="is_auto_executed" Nullable="false" />
+          <Property Type="Boolean" Name="is_execution_replicated" Nullable="true" />
+          <Property Type="Boolean" Name="is_repl_serializable_only" Nullable="true" />
+          <Property Type="Boolean" Name="skips_repl_constraints" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SalonManagementSystemModelStoreContainer" CdmEntityContainer="SalonManagementSystemEntities">
+          <EntitySetMapping Name="Appointments">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Appointment">
+              <MappingFragment StoreEntitySet="Appointment">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+                <ScalarProperty Name="AdditionalCost" ColumnName="AdditionalCost" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="AppointmentStatusID" ColumnName="AppointmentStatusID" />
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppointmentServices">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.AppointmentService">
+              <MappingFragment StoreEntitySet="AppointmentService">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="AppointmentServiceID" ColumnName="AppointmentServiceID" />
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="AlternatePhoneNumber" ColumnName="AlternatePhoneNumber" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="AlternatePhoneNumber" ColumnName="AlternatePhoneNumber" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeTypes">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.EmployeeType">
+              <MappingFragment StoreEntitySet="EmployeeType">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceTypes">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.ServiceType">
+              <MappingFragment StoreEntitySet="ServiceType">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TimeRequired" ColumnName="TimeRequired" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteAppointment" FunctionName="SalonManagementSystemModel.Store.DeleteAppointment" />
+          <FunctionImportMapping FunctionImportName="DeleteAppointmentService" FunctionName="SalonManagementSystemModel.Store.DeleteAppointmentService" />
+          <FunctionImportMapping FunctionImportName="DeleteCustomer" FunctionName="SalonManagementSystemModel.Store.DeleteCustomer" />
+          <FunctionImportMapping FunctionImportName="DeleteEmployee" FunctionName="SalonManagementSystemModel.Store.DeleteEmployee" />
+          <FunctionImportMapping FunctionImportName="DeleteEmployeeType" FunctionName="SalonManagementSystemModel.Store.DeleteEmployeeType" />
+          <FunctionImportMapping FunctionImportName="DeleteService" FunctionName="SalonManagementSystemModel.Store.DeleteService" />
+          <FunctionImportMapping FunctionImportName="DeleteServiceType" FunctionName="SalonManagementSystemModel.Store.DeleteServiceType" />
+          <FunctionImportMapping FunctionImportName="GetAppointment" FunctionName="SalonManagementSystemModel.Store.GetAppointment">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetAppointment_Result">
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="AppointmentStatusID" ColumnName="AppointmentStatusID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="AdditionalCost" ColumnName="AdditionalCost" />
+                <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetAppointmentService" FunctionName="SalonManagementSystemModel.Store.GetAppointmentService">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetAppointmentService_Result">
+                <ScalarProperty Name="AppointmentServiceID" ColumnName="AppointmentServiceID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="TimeRequired" ColumnName="TimeRequired" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="AppointmentNotes" ColumnName="AppointmentNotes" />
+                <ScalarProperty Name="AppointmentStatusID" ColumnName="AppointmentStatusID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetCustomer" FunctionName="SalonManagementSystemModel.Store.GetCustomer">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetCustomer_Result">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="AlternatePhoneNumber" ColumnName="AlternatePhoneNumber" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetEmployee" FunctionName="SalonManagementSystemModel.Store.GetEmployee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetEmployee_Result">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="AlternatePhoneNumber" ColumnName="AlternatePhoneNumber" />
+                <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetEmployeeType" FunctionName="SalonManagementSystemModel.Store.GetEmployeeType">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetEmployeeType_Result">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetService" FunctionName="SalonManagementSystemModel.Store.GetService">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetService_Result">
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetServiceType" FunctionName="SalonManagementSystemModel.Store.GetServiceType">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetServiceType_Result">
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+                <ScalarProperty Name="TimeRequired" ColumnName="TimeRequired" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SetAppointment" FunctionName="SalonManagementSystemModel.Store.SetAppointment" />
+          <FunctionImportMapping FunctionImportName="SetAppointmentService" FunctionName="SalonManagementSystemModel.Store.SetAppointmentService" />
+          <FunctionImportMapping FunctionImportName="SetCustomer" FunctionName="SalonManagementSystemModel.Store.SetCustomer" />
+          <FunctionImportMapping FunctionImportName="SetEmployee" FunctionName="SalonManagementSystemModel.Store.SetEmployee" />
+          <FunctionImportMapping FunctionImportName="SetEmployeeType" FunctionName="SalonManagementSystemModel.Store.SetEmployeeType" />
+          <FunctionImportMapping FunctionImportName="SetService" FunctionName="SalonManagementSystemModel.Store.SetService" />
+          <FunctionImportMapping FunctionImportName="SetServiceType" FunctionName="SalonManagementSystemModel.Store.SetServiceType" />
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="IsTypeOf(SalonManagementSystemModel.Service)">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCategories">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.ProductCategory">
+              <MappingFragment StoreEntitySet="ProductCategory">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Stock">
+              <MappingFragment StoreEntitySet="Stock">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StockID" ColumnName="StockID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteProduct" FunctionName="SalonManagementSystemModel.Store.DeleteProduct" />
+          <FunctionImportMapping FunctionImportName="DeleteProductCategory" FunctionName="SalonManagementSystemModel.Store.DeleteProductCategory" />
+          <FunctionImportMapping FunctionImportName="DeleteStock" FunctionName="SalonManagementSystemModel.Store.DeleteStock" />
+          <FunctionImportMapping FunctionImportName="GetProduct" FunctionName="SalonManagementSystemModel.Store.GetProduct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetProduct_Result">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetProductCategory" FunctionName="SalonManagementSystemModel.Store.GetProductCategory">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetProductCategory_Result">
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetStock" FunctionName="SalonManagementSystemModel.Store.GetStock">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetStock_Result">
+                <ScalarProperty Name="StockID" ColumnName="StockID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SetProduct" FunctionName="SalonManagementSystemModel.Store.SetProduct" />
+          <FunctionImportMapping FunctionImportName="SetProductCategory" FunctionName="SalonManagementSystemModel.Store.SetProductCategory" />
+          <FunctionImportMapping FunctionImportName="SetStock" FunctionName="SalonManagementSystemModel.Store.SetStock" />
+          <EntitySetMapping Name="Expenses">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Expense">
+              <MappingFragment StoreEntitySet="Expense">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ExpenseTypeID" ColumnName="ExpenseTypeID" />
+                <ScalarProperty Name="ExpenseID" ColumnName="ExpenseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductServices">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.ProductService">
+              <MappingFragment StoreEntitySet="ProductService">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="ProductServiceID" ColumnName="ProductServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteExpense" FunctionName="SalonManagementSystemModel.Store.DeleteExpense" />
+          <FunctionImportMapping FunctionImportName="DeleteProductService" FunctionName="SalonManagementSystemModel.Store.DeleteProductService" />
+          <FunctionImportMapping FunctionImportName="GetExpense" FunctionName="SalonManagementSystemModel.Store.GetExpense">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetExpense_Result">
+                <ScalarProperty Name="ExpenseID" ColumnName="ExpenseID" />
+                <ScalarProperty Name="ExpenseTypeID" ColumnName="ExpenseTypeID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetProductService" FunctionName="SalonManagementSystemModel.Store.GetProductService">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetProductService_Result">
+                <ScalarProperty Name="ProductServiceID" ColumnName="ProductServiceID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+                <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SetExpense" FunctionName="SalonManagementSystemModel.Store.SetExpense" />
+          <FunctionImportMapping FunctionImportName="SetProductService" FunctionName="SalonManagementSystemModel.Store.SetProductService" />
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="SNTN" ColumnName="SNTN" />
+                <ScalarProperty Name="NTN" ColumnName="NTN" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="TagLine" ColumnName="TagLine" />
+                <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TelePhoneNumber" ColumnName="TelePhoneNumber" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteAccount" FunctionName="SalonManagementSystemModel.Store.DeleteAccount" />
+          <FunctionImportMapping FunctionImportName="GetAccount" FunctionName="SalonManagementSystemModel.Store.GetAccount">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetAccount_Result">
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="ObjectName" ColumnName="ObjectName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SetAccount" FunctionName="SalonManagementSystemModel.Store.SetAccount" />
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientTypes">
+            <EntityTypeMapping TypeName="SalonManagementSystemModel.ClientType">
+              <MappingFragment StoreEntitySet="ClientType">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="Charges" ColumnName="Charges" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteClient" FunctionName="SalonManagementSystemModel.Store.DeleteClient" />
+          <FunctionImportMapping FunctionImportName="DeleteClientType" FunctionName="SalonManagementSystemModel.Store.DeleteClientType" />
+          <FunctionImportMapping FunctionImportName="GetClient" FunctionName="SalonManagementSystemModel.Store.GetClient">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetClient_Result">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="TelePhoneNumber" ColumnName="TelePhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+                <ScalarProperty Name="TagLine" ColumnName="TagLine" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="NTN" ColumnName="NTN" />
+                <ScalarProperty Name="SNTN" ColumnName="SNTN" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetClientType" FunctionName="SalonManagementSystemModel.Store.GetClientType" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetClientType_Result">
+                <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Charges" ColumnName="Charges" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetDashboardKPI" FunctionName="SalonManagementSystemModel.Store.GetDashboardKPI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetDashboardKPI_Result">
+                <ScalarProperty Name="Appointments" ColumnName="Appointments" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+                <ScalarProperty Name="Income" ColumnName="Income" />
+                <ScalarProperty Name="Expense" ColumnName="Expense" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetMonthlySales" FunctionName="SalonManagementSystemModel.Store.GetMonthlySales">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetMonthlySales_Result">
+                <ScalarProperty Name="Sales" ColumnName="Sales" />
+                <ScalarProperty Name="Expense" ColumnName="Expense" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="MonthNo" ColumnName="MonthNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetWeeklySales" FunctionName="SalonManagementSystemModel.Store.GetWeeklySales">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.GetWeeklySales_Result">
+                <ScalarProperty Name="Sales" ColumnName="Sales" />
+                <ScalarProperty Name="TotalAppointments" ColumnName="TotalAppointments" />
+                <ScalarProperty Name="Expense" ColumnName="Expense" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="WeekDay" ColumnName="WeekDay" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SetClient" FunctionName="SalonManagementSystemModel.Store.SetClient" />
+          <FunctionImportMapping FunctionImportName="SetClientType" FunctionName="SalonManagementSystemModel.Store.SetClientType" />
+          <FunctionImportMapping FunctionImportName="ftxt" FunctionName="SalonManagementSystemModel.Store.ftxt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalonManagementSystemModel.ftxt_Result">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="object_id" ColumnName="object_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="schema_id" ColumnName="schema_id" />
+                <ScalarProperty Name="parent_object_id" ColumnName="parent_object_id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="type_desc" ColumnName="type_desc" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+                <ScalarProperty Name="is_ms_shipped" ColumnName="is_ms_shipped" />
+                <ScalarProperty Name="is_published" ColumnName="is_published" />
+                <ScalarProperty Name="is_schema_published" ColumnName="is_schema_published" />
+                <ScalarProperty Name="is_auto_executed" ColumnName="is_auto_executed" />
+                <ScalarProperty Name="is_execution_replicated" ColumnName="is_execution_replicated" />
+                <ScalarProperty Name="is_repl_serializable_only" ColumnName="is_repl_serializable_only" />
+                <ScalarProperty Name="skips_repl_constraints" ColumnName="skips_repl_constraints" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

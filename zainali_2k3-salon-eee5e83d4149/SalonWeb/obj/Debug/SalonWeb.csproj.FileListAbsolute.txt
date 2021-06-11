@@ -1,0 +1,360 @@
+C:\InHouse\Salon\SalonWeb\bin\ApplicationInsights.config
+C:\InHouse\Salon\SalonWeb\bin\roslyn\csc.exe
+C:\InHouse\Salon\SalonWeb\bin\roslyn\csc.exe.config
+C:\InHouse\Salon\SalonWeb\bin\roslyn\csc.rsp
+C:\InHouse\Salon\SalonWeb\bin\roslyn\csi.exe
+C:\InHouse\Salon\SalonWeb\bin\roslyn\csi.exe.config
+C:\InHouse\Salon\SalonWeb\bin\roslyn\csi.rsp
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\InHouse\Salon\SalonWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.AppContext.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Console.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Diagnostics.Process.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.IO.Compression.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.IO.Pipes.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.Claims.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Threading.Thread.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.ValueTuple.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Xml.XPath.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\InHouse\Salon\SalonWeb\bin\roslyn\vbc.exe
+C:\InHouse\Salon\SalonWeb\bin\roslyn\vbc.exe.config
+C:\InHouse\Salon\SalonWeb\bin\roslyn\vbc.rsp
+C:\InHouse\Salon\SalonWeb\bin\roslyn\VBCSCompiler.exe
+C:\InHouse\Salon\SalonWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\InHouse\Salon\SalonWeb\bin\SalonWeb.dll.config
+C:\InHouse\Salon\SalonWeb\bin\SalonWeb.dll
+C:\InHouse\Salon\SalonWeb\bin\SalonWeb.pdb
+C:\InHouse\Salon\SalonWeb\bin\Antlr3.Runtime.dll
+C:\InHouse\Salon\SalonWeb\bin\AspNet.ScriptManager.bootstrap.dll
+C:\InHouse\Salon\SalonWeb\bin\AspNet.ScriptManager.jQuery.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.DependencyCollector.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.Web.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.WindowsServer.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.ApplicationInsights.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.ScriptManager.WebForms.dll
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\InHouse\Salon\SalonWeb\bin\Newtonsoft.Json.dll
+C:\InHouse\Salon\SalonWeb\bin\SalonLibrary.dll
+C:\InHouse\Salon\SalonWeb\bin\System.Web.Optimization.dll
+C:\InHouse\Salon\SalonWeb\bin\WebGrease.dll
+C:\InHouse\Salon\SalonWeb\bin\EntityFramework.dll
+C:\InHouse\Salon\SalonWeb\bin\SalonLibrary.pdb
+C:\InHouse\Salon\SalonWeb\bin\SalonLibrary.dll.config
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\InHouse\Salon\SalonWeb\bin\Newtonsoft.Json.xml
+C:\InHouse\Salon\SalonWeb\bin\System.Web.Optimization.xml
+C:\InHouse\Salon\SalonWeb\bin\Antlr3.Runtime.pdb
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.ApplicationInsights.xml
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.DependencyCollector.xml
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.WindowsServer.xml
+C:\InHouse\Salon\SalonWeb\bin\Microsoft.AI.Web.xml
+C:\InHouse\Salon\SalonWeb\obj\Debug\SalonWeb.csprojAssemblyReference.cache
+C:\InHouse\Salon\SalonWeb\obj\Debug\SalonWeb.csproj.CoreCompileInputs.cache
+C:\InHouse\Salon\SalonWeb\obj\Debug\SalonWeb.csproj.CopyComplete
+C:\InHouse\Salon\SalonWeb\obj\Debug\SalonWeb.dll
+C:\InHouse\Salon\SalonWeb\obj\Debug\SalonWeb.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\ApplicationInsights.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\csc.exe
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\csc.exe.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\csc.rsp
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\csi.exe
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\csi.exe.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\csi.rsp
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.AppContext.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Console.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.IO.Compression.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.IO.Pipes.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.Claims.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Threading.Thread.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.ValueTuple.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Xml.XPath.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\vbc.exe
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\vbc.exe.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\vbc.rsp
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\VBCSCompiler.exe
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\SalonWeb.dll.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\SalonWeb.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\SalonWeb.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Antlr3.Runtime.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\AspNet.ScriptManager.bootstrap.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\AspNet.ScriptManager.jQuery.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.DependencyCollector.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.Web.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.WindowsServer.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.ApplicationInsights.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.ScriptManager.WebForms.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Newtonsoft.Json.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\SalonLibrary.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\System.Web.Optimization.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\WebGrease.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\EntityFramework.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\SalonLibrary.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\SalonLibrary.dll.config
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Newtonsoft.Json.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\System.Web.Optimization.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Antlr3.Runtime.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.ApplicationInsights.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.DependencyCollector.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.WindowsServer.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\bin\Microsoft.AI.Web.xml
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\obj\Debug\SalonWeb.csprojAssemblyReference.cache
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\obj\Debug\SalonWeb.csproj.CoreCompileInputs.cache
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\obj\Debug\SalonWeb.csproj.CopyComplete
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\obj\Debug\SalonWeb.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\SalonWeb\obj\Debug\SalonWeb.pdb
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\ApplicationInsights.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csc.exe
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csc.exe.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csc.rsp
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csi.exe
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csi.exe.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csi.rsp
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.AppContext.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Console.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.Compression.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.Pipes.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Claims.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Threading.Thread.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.ValueTuple.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.XPath.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\vbc.exe
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\vbc.exe.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\vbc.rsp
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\VBCSCompiler.exe
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonWeb.dll.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonWeb.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonWeb.pdb
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Antlr3.Runtime.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\AspNet.ScriptManager.bootstrap.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\AspNet.ScriptManager.jQuery.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.Agent.Intercept.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.DependencyCollector.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.Web.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.WindowsServer.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ApplicationInsights.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ScriptManager.WebForms.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Newtonsoft.Json.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonLibrary.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\System.Web.Optimization.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\WebGrease.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\EntityFramework.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonLibrary.pdb
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonLibrary.dll.config
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Newtonsoft.Json.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\System.Web.Optimization.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Antlr3.Runtime.pdb
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ApplicationInsights.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.DependencyCollector.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.WindowsServer.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.Web.xml
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.csproj.AssemblyReference.cache
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.csproj.CoreCompileInputs.cache
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.csproj.CopyComplete
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.dll
+D:\hafeez-data\.net web\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.pdb
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\ApplicationInsights.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csc.exe
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csc.exe.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csc.rsp
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csi.exe
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csi.exe.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\csi.rsp
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Console.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\vbc.exe
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\vbc.exe.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\vbc.rsp
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonWeb.dll.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonWeb.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonWeb.pdb
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Antlr3.Runtime.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.Web.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Newtonsoft.Json.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonLibrary.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\System.Web.Optimization.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\WebGrease.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\EntityFramework.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonLibrary.pdb
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\SalonLibrary.dll.config
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Newtonsoft.Json.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\System.Web.Optimization.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Antlr3.Runtime.pdb
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\bin\Microsoft.AI.Web.xml
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.csprojAssemblyReference.cache
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.csproj.CoreCompileInputs.cache
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.csproj.CopyComplete
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.dll
+C:\Users\Zain-PC\Downloads\zainali_2k3-salon-eee5e83d4149\zainali_2k3-salon-eee5e83d4149\SalonWeb\obj\Debug\SalonWeb.pdb

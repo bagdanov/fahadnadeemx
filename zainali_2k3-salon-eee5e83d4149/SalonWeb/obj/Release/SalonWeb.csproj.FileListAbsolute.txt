@@ -1,0 +1,2 @@
+C:\InHouse\Salon\SalonWeb\obj\Release\SalonWeb.csproj.CoreCompileInputs.cache
+C:\InHouse\Salon\SalonWeb\obj\Release\SalonWeb.csprojAssemblyReference.cache

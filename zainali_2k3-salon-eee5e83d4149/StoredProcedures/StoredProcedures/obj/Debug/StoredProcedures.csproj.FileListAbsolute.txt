@@ -1,0 +1,33 @@
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csprojAssemblyReference.cache
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CoreCompileInputs.cache
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.exe.config
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.exe
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.pdb
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.dll
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.pdb
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.dll.config
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\bin\Debug\EntityFramework.xml
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CopyComplete
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.exe
+F:\Projects\Salon management system\SalonManagement-Web\SalonManagement-Web\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csprojAssemblyReference.cache
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CoreCompileInputs.cache
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.exe.config
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.exe
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.dll
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.pdb
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.dll.config
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CopyComplete
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.exe
+D:\Axcore_content\ParlorManagementSystem\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.pdb
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.exe.config
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.exe
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\bin\Debug\StoredProcedures.pdb
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.dll
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.pdb
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\bin\Debug\SalonLibrary.dll.config
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csprojResolveAssemblyReference.cache
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CoreCompileInputs.cache
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.exe
+C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.pdb

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8976348d29b543aa985c9a15de03b7d6" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Appointment" Width="1.75" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.AppointmentService" Width="2" PointX="4.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Customer" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Employee" Width="1.5" PointX="6.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.EmployeeType" Width="1.5" PointX="8.375" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Service" Width="1.5" PointX="8.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Product" Width="1.5" PointX="4.375" PointY="6.5" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.ProductCategory" Width="1.5" PointX="4.375" PointY="3.75" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Stock" Width="1.5" PointX="0.625" PointY="5" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Expense" Width="1.5" PointX="2.375" PointY="4.375" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.ProductService" Width="1.5" PointX="8.375" PointY="6.125" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.ServiceType" Width="1.5" PointX="6.625" PointY="0.5" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Client" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.Account" Width="1.5" PointX="4.375" PointY="10.75" />
+        <EntityTypeShape EntityType="SalonManagementSystemModel.ClientType" Width="1.5" PointX="0.75" PointY="9.75" />
+      </Diagram>
+      <Diagram DiagramId="fadc74d65b694acb8d6739ecab29ffcd" Name="Diagram2" >
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

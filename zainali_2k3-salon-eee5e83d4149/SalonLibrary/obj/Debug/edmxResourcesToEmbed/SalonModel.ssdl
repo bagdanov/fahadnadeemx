@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalonManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObjectID" Type="int" />
+    <Property Name="ModuleID" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Debit" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Credit" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppointmentDateTime" Type="datetime" />
+    <Property Name="AppointmentStatusID" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="InvoiceDate" Type="datetime" />
+    <Property Name="AdditionalCost" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="PaymentMode" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="AppointmentService">
+    <Key>
+      <PropertyRef Name="AppointmentServiceID" />
+    </Key>
+    <Property Name="AppointmentServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppointmentID" Type="int" />
+    <Property Name="ServiceID" Type="int" />
+    <Property Name="ServiceTypeID" Type="int" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="1000" />
+    <Property Name="TelePhoneNumber" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Email" Type="nvarchar" MaxLength="1000" />
+    <Property Name="City" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Country" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientTypeID" Type="int" />
+    <Property Name="TagLine" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Website" Type="nvarchar" MaxLength="1000" />
+    <Property Name="NTN" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SNTN" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="ClientType">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Charges" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="PackageName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AlternatePhoneNumber" Type="nvarchar" MaxLength="1000" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Password" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+    <Property Name="City" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CustomerTypeID" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AlternatePhoneNumber" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="CNIC" Type="nvarchar" MaxLength="1000" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Password" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+    <Property Name="EmployeeTypeID" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="EmployeeType">
+    <Key>
+      <PropertyRef Name="EmployeeTypeID" />
+    </Key>
+    <Property Name="EmployeeTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="ExpenseID" />
+    </Key>
+    <Property Name="ExpenseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpenseTypeID" Type="int" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCategoryID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductService">
+    <Key>
+      <PropertyRef Name="ProductServiceID" />
+    </Key>
+    <Property Name="ProductServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceID" Type="int" />
+    <Property Name="ServiceTypeID" Type="int" />
+    <Property Name="ProductCategoryID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="ServiceType">
+    <Key>
+      <PropertyRef Name="ServiceTypeID" />
+    </Key>
+    <Property Name="ServiceTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Cost" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="TimeRequired" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="ProductCategoryID" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <Function Name="DeleteAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="accountID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteAppointmentService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="appointmentServiceID" Type="int" Mode="In" />
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientTypeID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="employeeID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteEmployeeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="employeeTypeID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="expenseID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteProductService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productServiceID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteServiceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stockID" Type="int" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="F_GetAppointmentCost" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FromDate" Type="date" Mode="In" />
+    <Parameter Name="ToDate" Type="date" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+    <Parameter Name="customerID" Type="int" Mode="In" />
+    <Parameter Name="dateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="dateTo" Type="datetime" Mode="In" />
+    <Parameter Name="statusID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAppointmentService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="appointmentServiceID" Type="int" Mode="In" />
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="customerID" Type="int" Mode="In" />
+    <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetDashboardKPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="dateTo" Type="datetime" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="employeeID" Type="int" Mode="In" />
+    <Parameter Name="emailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetEmployeeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="expenseID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetMonthlySales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetProductService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productServiceID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetServiceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stockID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetWeeklySales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="moduleID" Type="int" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="accountID" Type="int" Mode="In" />
+    <Parameter Name="objectID" Type="int" Mode="In" />
+    <Parameter Name="moduleID" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="description" Type="nvarchar" Mode="In" />
+    <Parameter Name="debit" Type="decimal" Mode="In" />
+    <Parameter Name="credit" Type="decimal" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+    <Parameter Name="appointmentDateTime" Type="datetime" Mode="In" />
+    <Parameter Name="appointmentStatusID" Type="int" Mode="In" />
+    <Parameter Name="customerID" Type="int" Mode="In" />
+    <Parameter Name="invoiceDate" Type="datetime" Mode="In" />
+    <Parameter Name="additionalCost" Type="decimal" Mode="In" />
+    <Parameter Name="paymentMode" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetAppointmentService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="appointmentServiceID" Type="int" Mode="In" />
+    <Parameter Name="appointmentID" Type="int" Mode="In" />
+    <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="employeeID" Type="int" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientID" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="telephoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="country" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientTypeID" Type="int" Mode="In" />
+    <Parameter Name="tagLine" Type="nvarchar" Mode="In" />
+    <Parameter Name="website" Type="nvarchar" Mode="In" />
+    <Parameter Name="nTN" Type="nvarchar" Mode="In" />
+    <Parameter Name="sNTN" Type="nvarchar" Mode="In" />
+    <Parameter Name="logo" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SetClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientTypeID" Type="int" Mode="In" />
+    <Parameter Name="typeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="charges" Type="decimal" Mode="In" />
+    <Parameter Name="packageName" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="customerID" Type="int" Mode="In" />
+    <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="dateOfBirth" Type="datetime" Mode="In" />
+    <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="alternatePhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="emailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="employeeID" Type="int" Mode="In" />
+    <Parameter Name="fullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="alternatePhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="dateOfBirth" Type="datetime" Mode="In" />
+    <Parameter Name="cNIC" Type="nvarchar" Mode="In" />
+    <Parameter Name="emailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="employeeTypeID" Type="int" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetEmployeeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="employeeTypeID" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="description" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="expenseID" Type="int" Mode="In" />
+    <Parameter Name="expenseTypeID" Type="int" Mode="In" />
+    <Parameter Name="typeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="amount" Type="decimal" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="productName" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetProductService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productServiceID" Type="int" Mode="In" />
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="quantity" Type="decimal" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SetService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetServiceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceTypeID" Type="int" Mode="In" />
+    <Parameter Name="serviceID" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="cost" Type="decimal" Mode="In" />
+    <Parameter Name="timeRequired" Type="decimal" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stockID" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="productCategoryID" Type="int" Mode="In" />
+    <Parameter Name="quantity" Type="decimal" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="clientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ftxt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="invizen">
+    <Parameter Name="txt" Type="varchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="SalonManagementSystemModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppointmentService" EntityType="Self.AppointmentService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientType" EntityType="Self.ClientType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeType" EntityType="Self.EmployeeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expense" EntityType="Self.Expense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductService" EntityType="Self.ProductService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceType" EntityType="Self.ServiceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

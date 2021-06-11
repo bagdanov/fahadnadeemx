@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalonManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppointmentDateTime" Type="DateTime" Precision="3" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AppointmentStatusID" Type="Int32" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="AdditionalCost" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="PaymentMode" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AppointmentService">
+    <Key>
+      <PropertyRef Name="AppointmentServiceID" />
+    </Key>
+    <Property Name="AppointmentServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppointmentID" Type="Int32" />
+    <Property Name="ServiceTypeID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceID" Type="Int32" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="AlternatePhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerTypeID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="AlternatePhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="CNIC" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeTypeID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EmployeeType">
+    <Key>
+      <PropertyRef Name="EmployeeTypeID" />
+    </Key>
+    <Property Name="EmployeeTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ServiceType">
+    <Key>
+      <PropertyRef Name="ServiceTypeID" />
+    </Key>
+    <Property Name="ServiceTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="TimeRequired" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="SalonManagementSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+    <EntitySet Name="AppointmentServices" EntityType="Self.AppointmentService" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="EmployeeTypes" EntityType="Self.EmployeeType" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="ServiceTypes" EntityType="Self.ServiceType" />
+    <FunctionImport Name="DeleteAppointment" ReturnType="Collection(Int32)">
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteAppointmentService" ReturnType="Collection(Int32)">
+      <Parameter Name="appointmentServiceID" Mode="In" Type="Int32" />
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteCustomer" ReturnType="Collection(Int32)">
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteEmployee" ReturnType="Collection(Int32)">
+      <Parameter Name="employeeID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteEmployeeType" ReturnType="Collection(Int32)">
+      <Parameter Name="employeeTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteInvoice" ReturnType="Collection(Int32)">
+      <Parameter Name="invoiceID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteService" ReturnType="Collection(Int32)">
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteServiceType" ReturnType="Collection(Int32)">
+      <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAppointment" ReturnType="Collection(SalonManagementSystemModel.GetAppointment_Result)">
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="customerID" Mode="In" Type="Int32" />
+      <Parameter Name="dateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="statusID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAppointmentService" ReturnType="Collection(SalonManagementSystemModel.GetAppointmentService_Result)">
+      <Parameter Name="appointmentServiceID" Mode="In" Type="Int32" />
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomer" ReturnType="Collection(SalonManagementSystemModel.GetCustomer_Result)">
+      <Parameter Name="customerID" Mode="In" Type="Int32" />
+      <Parameter Name="phoneNumber" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetEmployee" ReturnType="Collection(SalonManagementSystemModel.GetEmployee_Result)">
+      <Parameter Name="employeeID" Mode="In" Type="Int32" />
+      <Parameter Name="emailAddress" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetEmployeeType" ReturnType="Collection(SalonManagementSystemModel.GetEmployeeType_Result)">
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetInvoice" ReturnType="Collection(SalonManagementSystemModel.GetInvoice_Result)">
+      <Parameter Name="invoiceID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetService" ReturnType="Collection(SalonManagementSystemModel.GetService_Result)">
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetServiceType" ReturnType="Collection(SalonManagementSystemModel.GetServiceType_Result)">
+      <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetAppointment" ReturnType="Collection(Int32)">
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="appointmentDateTime" Mode="In" Type="DateTime" />
+      <Parameter Name="appointmentStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="customerID" Mode="In" Type="Int32" />
+      <Parameter Name="invoiceDate" Mode="In" Type="DateTime" />
+      <Parameter Name="additionalCost" Mode="In" Type="Decimal" />
+      <Parameter Name="paymentMode" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetAppointmentService" ReturnType="Collection(Int32)">
+      <Parameter Name="appointmentServiceID" Mode="In" Type="Int32" />
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="employeeID" Mode="In" Type="Int32" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetCustomer" ReturnType="Collection(Int32)">
+      <Parameter Name="customerID" Mode="In" Type="Int32" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+      <Parameter Name="dateOfBirth" Mode="In" Type="DateTime" />
+      <Parameter Name="phoneNumber" Mode="In" Type="String" />
+      <Parameter Name="alternatePhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="emailAddress" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetEmployee" ReturnType="Collection(Int32)">
+      <Parameter Name="employeeID" Mode="In" Type="Int32" />
+      <Parameter Name="fullName" Mode="In" Type="String" />
+      <Parameter Name="phoneNumber" Mode="In" Type="String" />
+      <Parameter Name="alternatePhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="dateOfBirth" Mode="In" Type="DateTime" />
+      <Parameter Name="cNIC" Mode="In" Type="String" />
+      <Parameter Name="emailAddress" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="employeeTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetEmployeeType" ReturnType="Collection(Int32)">
+      <Parameter Name="employeeTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="description" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetInvoice" ReturnType="Collection(Int32)">
+      <Parameter Name="invoiceID" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="totalCost" Mode="In" Type="Decimal" />
+      <Parameter Name="additionalCost" Mode="In" Type="Decimal" />
+      <Parameter Name="paymentMode" Mode="In" Type="String" />
+      <Parameter Name="customerID" Mode="In" Type="Int32" />
+      <Parameter Name="appointmentID" Mode="In" Type="Int32" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SetService" ReturnType="Collection(Int32)">
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetServiceType" ReturnType="Collection(Int32)">
+      <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="cost" Mode="In" Type="Decimal" />
+      <Parameter Name="timeRequired" Mode="In" Type="Decimal" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Products" EntityType="SalonManagementSystemModel.Product" />
+    <EntitySet Name="ProductCategories" EntityType="SalonManagementSystemModel.ProductCategory" />
+    <EntitySet Name="Stocks" EntityType="SalonManagementSystemModel.Stock" />
+    <FunctionImport Name="DeleteProduct" ReturnType="Collection(Int32)">
+      <Parameter Name="productID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteProductCategory" ReturnType="Collection(Int32)">
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteStock" ReturnType="Collection(Int32)">
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProduct" ReturnType="Collection(SalonManagementSystemModel.GetProduct_Result)">
+      <Parameter Name="productID" Mode="In" Type="Int32" />
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProductCategory" ReturnType="Collection(SalonManagementSystemModel.GetProductCategory_Result)">
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetStock" ReturnType="Collection(SalonManagementSystemModel.GetStock_Result)">
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetProduct" ReturnType="Collection(Int32)">
+      <Parameter Name="productID" Mode="In" Type="Int32" />
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="productName" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetProductCategory" ReturnType="Collection(Int32)">
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetStock" ReturnType="Collection(Int32)">
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="productID" Mode="In" Type="Int32" />
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="quantity" Mode="In" Type="Decimal" />
+      <Parameter Name="price" Mode="In" Type="Decimal" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Expenses" EntityType="SalonManagementSystemModel.Expense" />
+    <EntitySet Name="ProductServices" EntityType="SalonManagementSystemModel.ProductService" />
+    <FunctionImport Name="DeleteExpense" ReturnType="Collection(Int32)">
+      <Parameter Name="expenseID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteProductService" ReturnType="Collection(Int32)">
+      <Parameter Name="productServiceID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetExpense" ReturnType="Collection(SalonManagementSystemModel.GetExpense_Result)">
+      <Parameter Name="expenseID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProductService" ReturnType="Collection(SalonManagementSystemModel.GetProductService_Result)">
+      <Parameter Name="productServiceID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetExpense" ReturnType="Collection(Int32)">
+      <Parameter Name="expenseID" Mode="In" Type="Int32" />
+      <Parameter Name="expenseTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="typeName" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="amount" Mode="In" Type="Decimal" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetProductService" ReturnType="Collection(Int32)">
+      <Parameter Name="productServiceID" Mode="In" Type="Int32" />
+      <Parameter Name="serviceID" Mode="In" Type="Int32" />
+      <Parameter Name="serviceTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="productCategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="productID" Mode="In" Type="Int32" />
+      <Parameter Name="quantity" Mode="In" Type="Decimal" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Clients" EntityType="SalonManagementSystemModel.Client" />
+    <FunctionImport Name="DeleteAccount" ReturnType="Collection(Int32)">
+      <Parameter Name="accountID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAccount" ReturnType="Collection(SalonManagementSystemModel.GetAccount_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetAccount" ReturnType="Collection(Int32)">
+      <Parameter Name="accountID" Mode="In" Type="Int32" />
+      <Parameter Name="objectID" Mode="In" Type="Int32" />
+      <Parameter Name="moduleID" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="description" Mode="In" Type="String" />
+      <Parameter Name="debit" Mode="In" Type="Decimal" />
+      <Parameter Name="credit" Mode="In" Type="Decimal" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Accounts" EntityType="SalonManagementSystemModel.Account" />
+    <EntitySet Name="ClientTypes" EntityType="SalonManagementSystemModel.ClientType" />
+    <FunctionImport Name="DeleteClient" ReturnType="Collection(Int32)">
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteClientType" ReturnType="Collection(Int32)">
+      <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetClient" ReturnType="Collection(SalonManagementSystemModel.GetClient_Result)">
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetClientType" ReturnType="Collection(SalonManagementSystemModel.GetClientType_Result)">
+      <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetDashboardKPI" ReturnType="Collection(SalonManagementSystemModel.GetDashboardKPI_Result)">
+      <Parameter Name="dateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetMonthlySales" ReturnType="Collection(SalonManagementSystemModel.GetMonthlySales_Result)">
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetWeeklySales" ReturnType="Collection(SalonManagementSystemModel.GetWeeklySales_Result)">
+      <Parameter Name="moduleID" Mode="In" Type="Int32" />
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SetClient" ReturnType="Collection(Int32)">
+      <Parameter Name="clientID" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="mobile" Mode="In" Type="String" />
+      <Parameter Name="telephoneNumber" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="country" Mode="In" Type="String" />
+      <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="tagLine" Mode="In" Type="String" />
+      <Parameter Name="website" Mode="In" Type="String" />
+      <Parameter Name="nTN" Mode="In" Type="String" />
+      <Parameter Name="sNTN" Mode="In" Type="String" />
+      <Parameter Name="logo" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SetClientType" ReturnType="Collection(Int32)">
+      <Parameter Name="clientTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="typeName" Mode="In" Type="String" />
+      <Parameter Name="charges" Mode="In" Type="Decimal" />
+      <Parameter Name="packageName" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ftxt" ReturnType="Collection(SalonManagementSystemModel.ftxt_Result)">
+      <Parameter Name="txt" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetAppointment_Result">
+    <Property Type="Int32" Name="AppointmentID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="2000" />
+    <Property Type="DateTime" Name="AppointmentDateTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="AppointmentStatusID" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="AdditionalCost" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="1000" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="TotalCost" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAppointmentService_Result">
+    <Property Type="Int32" Name="AppointmentServiceID" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Int32" Name="ServiceID" Nullable="true" />
+    <Property Type="Int32" Name="AppointmentID" Nullable="false" />
+    <Property Type="String" Name="ServiceTypeName" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ServiceTypeID" Nullable="true" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="TimeRequired" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="AppointmentDateTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="2000" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="AppointmentNotes" Nullable="true" />
+    <Property Type="Int32" Name="AppointmentStatusID" Nullable="true" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetCustomer_Result">
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="AlternatePhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="CustomerTypeID" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetEmployee_Result">
+    <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="EmployeeType" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="AlternatePhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="CNIC" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Int32" Name="EmployeeTypeID" Nullable="true" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetEmployeeType_Result">
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="1000" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Int32" Name="EmployeeTypeID" Nullable="false" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetInvoice_Result">
+    <Property Type="Int32" Name="InvoiceID" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="2000" />
+    <Property Type="DateTime" Name="AppointmentDateTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Cost" Nullable="true" MaxLength="1000" />
+    <Property Type="Decimal" Name="TotalCost" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="AdditionalCost" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="1000" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetService_Result">
+    <Property Type="Int32" Name="ServiceID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="1000" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetServiceType_Result">
+    <Property Type="Int32" Name="ServiceTypeID" Nullable="false" />
+    <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ServiceTypeName" Nullable="true" MaxLength="1000" />
+    <Property Type="Decimal" Name="TimeRequired" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Int32" Name="ServiceID" Nullable="false" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCategoryID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="ProductCategoryID" Type="Int32" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="GetProduct_Result">
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductCategoryID" Nullable="true" />
+    <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetProductCategory_Result">
+    <Property Type="Int32" Name="ProductCategoryID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetStock_Result">
+    <Property Type="Int32" Name="StockID" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="Int32" Name="ProductCategoryID" Nullable="true" />
+    <Property Type="Decimal" Name="Quantity" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="ExpenseID" />
+    </Key>
+    <Property Name="ExpenseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseTypeID" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ProductService">
+    <Key>
+      <PropertyRef Name="ProductServiceID" />
+    </Key>
+    <Property Name="ProductServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceID" Type="Int32" />
+    <Property Name="ServiceTypeID" Type="Int32" />
+    <Property Name="ProductCategoryID" Type="Int32" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="GetExpense_Result">
+    <Property Type="Int32" Name="ExpenseID" Nullable="false" />
+    <Property Type="Int32" Name="ExpenseTypeID" Nullable="true" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="TypeName" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetProductService_Result">
+    <Property Type="Int32" Name="ProductServiceID" Nullable="false" />
+    <Property Type="Int32" Name="ServiceID" Nullable="true" />
+    <Property Type="Int32" Name="ServiceTypeID" Nullable="true" />
+    <Property Type="Int32" Name="ProductCategoryID" Nullable="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="Decimal" Name="Quantity" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ServiceTypeName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="1000" />
+  </ComplexType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TelePhoneNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientTypeID" Type="Int32" />
+    <Property Name="TagLine" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="NTN" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="SNTN" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="GetAccount_Result">
+    <Property Type="Int32" Name="AccountID" Nullable="false" />
+    <Property Type="Int32" Name="ObjectID" Nullable="true" />
+    <Property Type="Int32" Name="ModuleID" Nullable="true" />
+    <Property Type="String" Name="ObjectName" Nullable="true" MaxLength="16" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="Decimal" Name="Debit" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="Credit" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ObjectID" Type="Int32" />
+    <Property Name="ModuleID" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Debit" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Credit" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ClientType">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Charges" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="PackageName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="GetClient_Result">
+    <Property Type="Int32" Name="ClientID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="TypeName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="TelePhoneNumber" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="ClientTypeID" Nullable="true" />
+    <Property Type="String" Name="TagLine" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Website" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="NTN" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="SNTN" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Logo" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="GetDashboardKPI_Result">
+    <Property Type="Int32" Name="Appointments" Nullable="false" />
+    <Property Type="Int32" Name="Profit" Nullable="false" />
+    <Property Type="Int32" Name="Income" Nullable="false" />
+    <Property Type="Int32" Name="Expense" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetMonthlySales_Result">
+    <Property Type="Decimal" Name="Sales" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Expense" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Profit" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="Month" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="MonthNo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetWeeklySales_Result">
+    <Property Type="Decimal" Name="Sales" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="TotalAppointments" Nullable="true" />
+    <Property Type="Decimal" Name="Expense" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Profit" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="Day" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="WeekDay" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetClientType_Result">
+    <Property Type="Int32" Name="ClientTypeID" Nullable="false" />
+    <Property Type="String" Name="TypeName" Nullable="true" MaxLength="1000" />
+    <Property Type="Decimal" Name="Charges" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="PackageName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="ftxt_Result">
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="object_id" Nullable="false" />
+    <Property Type="Int32" Name="principal_id" Nullable="true" />
+    <Property Type="Int32" Name="schema_id" Nullable="false" />
+    <Property Type="Int32" Name="parent_object_id" Nullable="false" />
+    <Property Type="String" Name="type" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="type_desc" Nullable="true" MaxLength="60" />
+    <Property Type="DateTime" Name="create_date" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="modify_date" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="is_ms_shipped" Nullable="false" />
+    <Property Type="Boolean" Name="is_published" Nullable="false" />
+    <Property Type="Boolean" Name="is_schema_published" Nullable="false" />
+    <Property Type="Boolean" Name="is_auto_executed" Nullable="false" />
+    <Property Type="Boolean" Name="is_execution_replicated" Nullable="true" />
+    <Property Type="Boolean" Name="is_repl_serializable_only" Nullable="true" />
+    <Property Type="Boolean" Name="skips_repl_constraints" Nullable="true" />
+  </ComplexType>
+</Schema>
