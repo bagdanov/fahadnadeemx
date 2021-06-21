@@ -58,13 +58,17 @@
 
         .card {
             margin: 50px;
-            margin-left: 250px;
-            margin-right: 250px;
+            margin-left: 100px;
+            margin-right: 100px;
             background: #293aa3;
             padding: 20px;
             padding-left: 50px;
             padding-right: 50px;
             border-radius: 30px !important;
+        }
+
+        .main {
+            padding-top:50px;
         }
 
         input {
@@ -112,6 +116,8 @@
         .confrim {
             font-size: 64px;
         }
+    
+
     </style>
 </head>
 <script type="text/javascript">
@@ -125,8 +131,9 @@
 </script>
 <body>
     <form id="form1" runat="server">
+        <div class="main">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 align-self-center">
                 <div class="card">
                     <asp:Button OnClick="login()"><i class="las la-arrow-circle-left"></i></asp:Button>
 
@@ -141,7 +148,7 @@
                             <div class="form form-horizontal form-bordered">
                                 <div class="form-body">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12 col-lg-6">
                                             <div class="form-group row">
                                                 <%--<label class="col-md-6 label-control" for="userinput1">Full Name<span class="danger">*</span></label>--%>
                                                 <div class="col-md-12">
@@ -149,7 +156,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12 col-lg-6">
                                             <div class="form-group row">
                                                 <%-- <label class="col-md-6 label-control">Matricola No<span class="danger">*</span></label>--%>
                                                 <div class="col-md-12">
@@ -157,7 +164,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6" style="display: none;">
+                                        <div class="col-md-12 col-lg-6" style="display: none;">
                                             <div class="form-group row">
                                                 <label class="col-md-6 label-control" for="userinput2">Last Name</label>
                                                 <div class="col-md-9">
@@ -188,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12 col-lg-6">
                                             <div class="form-group row">
                                                 <%-- <label class="col-md-6 label-control" for="userinput5">Email<span class="danger">*</span></label>--%>
                                                 <div class="col-md-12">
@@ -196,7 +203,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12 col-lg-6">
                                             <div class="form-group row">
                                                 <%-- <label class="col-md-6 label-control" for="userinput5">Password<span class="danger">*</span></label>--%>
                                                 <div class="col-md-12">
@@ -266,6 +273,7 @@
                 </div>
             </div>
         </div>
+            </div>
         <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
         <!-- BEGIN VENDOR JS-->
         <!-- BEGIN PAGE VENDOR JS-->

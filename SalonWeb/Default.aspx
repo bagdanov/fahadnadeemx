@@ -76,6 +76,13 @@
     img {
         margin:20px;
     }
+
+   @media screen and (min-width: 720px) { 
+         .reverse {
+            flex-flow: wrap-reverse !important;
+         }
+    }
+
 </style>
         <script type="text/javascript">
             function register() {
@@ -95,8 +102,8 @@
             <div class="container">
                 <div class="row shedow">
                     <div class="col">
-                        <div class="row">
-                            <div class="col-sm">
+                        <div class="row reverse">
+                            <div class="col-md-12 col-lg-6">
                                 <h1>Make an Appointment</h1>
                                 <br />
                                 <p>
@@ -113,7 +120,7 @@
                                 <br />
                                 <img src="../../../app-assets/images/defualt-icon.png" alt="Appointment Management System" width="80%">
                             </div>
-                            <div class="col-sm">
+                            <div class="col-md-12 col-lg-6">
                                 <img src="../../../app-assets/images/defualtImag.png" alt="Appointment Management System" width="80%">
                             </div>
                         </div>
