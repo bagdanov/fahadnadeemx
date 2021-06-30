@@ -77,6 +77,7 @@ namespace SalonWeb
                 this.FindControl("dashboard").Visible = false;
                 this.FindControl("dashboardCustomer").Visible = true;
                 this.FindControl("crm").Visible = false;
+                this.FindControl("Li1").Visible = false;
                 this.FindControl("employee").Visible = false;
                 this.FindControl("inventory").Visible = false;
                 this.FindControl("stock").Visible = false;

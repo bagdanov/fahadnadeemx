@@ -9,7 +9,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
-    <title>Login Page - Sal App</title>
+    <title>Login Page - Unifi App</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/logo/salapp-crop.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/logo/salapp-crop.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
@@ -74,7 +74,7 @@
                                             <img src="../../../app-assets/images/logo-1.png" alt="Appointment Management System" style="max-height:170px; max-width:150px;">
                                                 <br />
                                                 <br />
-                                                 <h1 style="color:white; font-weight:bold;">Welcome Back!</h1>
+                                                 <h1 style="color:white; font-weight:bold;">Admin Panel</h1>
                                                   <p style="color:white;">Login to your existing Account</p>
                                         </div>
                                     </div>

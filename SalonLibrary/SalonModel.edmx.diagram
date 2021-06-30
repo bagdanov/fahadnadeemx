@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8976348d29b543aa985c9a15de03b7d6" Name="Diagram1" ZoomLevel="82">
+      <Diagram DiagramId="8976348d29b543aa985c9a15de03b7d6" Name="Diagram1" ZoomLevel="78">
         <EntityTypeShape EntityType="SalonManagementSystemModel.Appointment" Width="1.75" PointX="2.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SalonManagementSystemModel.AppointmentService" Width="2" PointX="4.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SalonManagementSystemModel.Customer" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />

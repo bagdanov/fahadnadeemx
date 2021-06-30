@@ -275,6 +275,12 @@
                                     <span class="menu-title textcolor" data-i18n="nav.navbars.main">Students</span>
                                 </a>
                             </li>
+                                <li class=" nav-item" runat="server" id="Li1">
+                                <a href="CRMGrid.aspx">
+                                      <i><img src="app-assets/images/icons/students.png" width="20px"/></i>
+                                    <span class="menu-title textcolor" data-i18n="nav.navbars.main">Students List</span>
+                                </a>
+                            </li>
                             <li class=" nav-item" runat="server" id="employee">
                                 <a href="EmployeeGrid.aspx">
                                      <i><img src="app-assets/images/icons/employee.png" width="20px"/></i>

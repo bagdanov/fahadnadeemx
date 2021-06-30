@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login Page - Sal App </title>
+    <title>Unifi Appointment Management System </title>
 
     <link rel="apple-touch-icon" href="../../../app-assets/images/logo/salapp-crop.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/logo/salapp-crop.png">
@@ -107,10 +107,9 @@
                                 <h1>Make an Appointment</h1>
                                 <br />
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, 
-                                    but the majority have suffered alteration in some form, by injected
-                                    humour, or randomised words which don't look even slightly believable.
-                                    If you are going to use a passage of Lorem Ipsum,
+                              Unifi Appointment booking, to make this easier for students and staff members 
+of university to manage appointments department wise. The user can book an appointment in any of the selected
+departments right now. We have initially three departments in the list Library, Seggetaria and International desk.
                                 </p>
                                 <br />
                                  <asp:Button class="btn register" onclick="register()"> Register </asp:Button>

@@ -31,3 +31,7 @@ C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.cs
 C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CoreCompileInputs.cache
 C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.exe
 C:\InHouse\Salon\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.pdb
+C:\Users\al habib trade\Downloads\HCI Project\Project Files\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.AssemblyReference.cache
+C:\Users\al habib trade\Downloads\HCI Project\Project Files\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.csproj.CoreCompileInputs.cache
+C:\Users\al habib trade\Downloads\HCI Project\Project Files\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.exe
+C:\Users\al habib trade\Downloads\HCI Project\Project Files\StoredProcedures\StoredProcedures\obj\Debug\StoredProcedures.pdb

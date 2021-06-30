@@ -67,9 +67,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SalonLibrary\SalonLibrary.csproj">
+    <ProjectReference Include="..\..\SalonLibrary\UnifiLibrary.csproj">
       <Project>{ab18561c-6082-44bb-87f9-756cb944e2e7}</Project>
-      <Name>SalonLibrary</Name>
+      <Name>UnifiLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
